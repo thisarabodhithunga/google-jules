@@ -1,0 +1,28 @@
+/* Footer Styles */
+.footer {
+    padding: 25px 20px;
+    background-color: #333; /* Dark background for footer */
+    color: #e0e0e0; /* Light text color */
+    text-align: center;
+    border-top: 3px solid #007bff; /* Blue accent line at the top */
+}
+
+.footer p { /* For copyright text */
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.footer .socialLinks { /* Optional: if repeating social links in footer */
+    margin-top: 10px;
+}
+
+.footer .socialLinks a {
+    color: #e0e0e0; /* Light color for links on dark background */
+    font-size: 1.3em; /* Adjust size as needed for footer */
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer .socialLinks a:hover {
+    color: #007bff; /* Blue on hover */
+}

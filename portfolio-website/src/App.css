@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f4f4f4; /* A light grey background for overall page */
+  color: #333; /* Default text color */
+}
+
+/* Basic styling for sections to give them some separation for now */
+/*
+div[id] { /!* This will target divs with IDs, which we might use for sections later *!/
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #fff; /!* White background for sections *!/
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+*/
+/* Placeholder for component-specific styles that might be added later */
+/* For example: */
+/* .navbar { ... } */
+/* .hero { ... } */

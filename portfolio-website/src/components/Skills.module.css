@@ -1,0 +1,77 @@
+/* Skills Section Styles */
+.skillsSection {
+    padding: 50px 20px;
+    background-color: #ffffff; /* White background */
+}
+
+.skillsSection h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    color: #333;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for categories */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the grid */
+}
+
+.skillCategory {
+    background-color: #f9f9f9; /* Light grey for category blocks */
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.skillCategory h3 {
+    font-size: 1.5em;
+    color: #0056b3; /* Dark blue for category titles */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff; /* Blue accent line */
+    padding-bottom: 10px;
+}
+
+.skillCategory ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.skillCategory li {
+    font-size: 1.05em;
+    color: #444;
+    padding: 8px 0; /* Vertical padding for list items */
+    border-bottom: 1px dashed #ddd; /* Separator for list items */
+    display: flex; /* For potential icon alignment later */
+    align-items: center; /* Align icon and text */
+}
+
+.skillCategory li:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+/* Placeholder for icon styling if added later
+.skillCategory li svg {
+    margin-right: 10px;
+    color: #007bff;
+}
+*/
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skillsGrid {
+        grid-template-columns: 1fr; /* Stack categories on smaller screens */
+    }
+
+    .skillCategory h3 {
+        font-size: 1.3em;
+    }
+
+    .skillCategory li {
+        font-size: 1em;
+    }
+}

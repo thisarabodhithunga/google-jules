@@ -1,0 +1,100 @@
+/* ProjectCard Styles */
+.projectCard {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.projectImage {
+    width: 100%;
+    height: 220px; /* Consistent height for images */
+    object-fit: cover; /* Cover the area, may crop */
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+.projectTitle {
+    font-size: 1.5em;
+    color: #0056b3; /* Dark blue */
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.projectTechStack {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.projectDescription {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allow description to take space before role/impact */
+}
+
+.projectCard h4 { /* For "Your Role + Impact:" heading */
+    font-size: 1.15em;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.roleImpactList {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+    color: #555;
+    flex-grow: 1; /* Allow list to take space, pushing links down */
+}
+
+.roleImpactList li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.projectLinks {
+    margin-top: auto; /* Pushes links to the bottom of the card */
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0; /* Light separator line */
+    text-align: right; /* Align links to the right */
+}
+
+.projectLinks a {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #007bff; /* Primary blue */
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.projectLinks a:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.projectLinks a.disabledLink { /* If a link is not available */
+    color: #aaa;
+    border-color: #ccc;
+    pointer-events: none; /* Not clickable */
+    opacity: 0.7;
+}

@@ -1,0 +1,67 @@
+/* Contact Section Styles */
+.contactSection {
+    padding: 50px 20px;
+    background-color: #ffffff; /* White background */
+    text-align: center;
+}
+
+.contactSection h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.contactSection .emailLink { /* Class for the paragraph containing the email */
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.contactSection .emailLink a {
+    color: #007bff; /* Blue for the email link */
+    text-decoration: none;
+}
+
+.contactSection .emailLink a:hover {
+    text-decoration: underline;
+}
+
+.socialLinks { /* Reusing/adapting from Hero or new */
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.socialLinks a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #007bff; /* Blue for social links */
+    font-size: 1.8em; /* Slightly larger for emphasis in contact section */
+    transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.collaborationMessage {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contactSection h2 {
+        font-size: 2em;
+    }
+    .contactSection .emailLink {
+        font-size: 1.1em;
+    }
+    .socialLinks a {
+        font-size: 1.6em;
+    }
+    .collaborationMessage {
+        font-size: 1em;
+    }
+}

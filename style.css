@@ -1,0 +1,219 @@
+/* Basic styles for the Hero Section */
+#hero {
+    background-color: #f0f0f0; /* Placeholder background color */
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#hero button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none; /* In case it's an anchor styled as a button */
+    margin-bottom: 20px;
+}
+
+#hero button:hover {
+    background-color: #0056b3;
+}
+
+#hero .social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1em;
+}
+
+#hero .social-links a:hover {
+    text-decoration: underline;
+}
+
+/* About Me Section */
+#about {
+    padding: 40px 20px;
+    background-color: #ffffff; /* White background for this section */
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+#about .about-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 30px; /* Space between image and content */
+    max-width: 900px; /* Max width for the content area */
+    margin: 0 auto; /* Center the container */
+}
+
+#about img {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border-radius: 50%; /* Circular image */
+    border: 3px solid #007bff;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+#about .content {
+    flex: 1; /* Takes remaining space */
+}
+
+#about .content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+#about .content h3 {
+    font-size: 1.5em;
+    color: #0056b3;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#about .content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+#about .content ul li {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light grey background */
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #333;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribute space around items */
+    gap: 20px; /* Gap between cards */
+}
+
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 40px); /* Adjust for 3 cards per row, considering gap. Subtract more than gap for safety. */
+    margin-bottom: 20px; /* Space below cards if they wrap */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive adjustments for project cards */
+@media (max-width: 992px) {
+    .project-card {
+        width: calc(50% - 30px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* 1 card per row */
+        margin-bottom: 30px;
+    }
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area, might crop */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+
+.project-card h3 {
+    font-size: 1.4em;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.project-card p { /* For "Problem Solved" */
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-card h4 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.project-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows the list to grow and push links to the bottom */
+}
+
+.project-card ul li {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.project-links {
+    margin-top: auto; /* Pushes links to the bottom of the card */
+    padding-top: 10px; /* Space above links */
+    border-top: 1px solid #f0f0f0; /* Separator line */
+    text-align: right;
+}
+
+.project-links a {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-links a:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}

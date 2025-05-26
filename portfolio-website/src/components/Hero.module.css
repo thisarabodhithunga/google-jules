@@ -1,0 +1,75 @@
+.heroSection {
+    background-color: #f0f0f0; /* Light grey */
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 70vh; /* Ensure it takes a good portion of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: #555;
+    max-width: 700px; /* Keep subtitle from being too wide */
+}
+
+.exploreButton {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.exploreButton:hover {
+    background-color: #0056b3;
+}
+
+.socialLinks {
+    margin-top: 20px;
+}
+
+.socialLinks a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.5em; /* Larger icons/links */
+    transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.2em;
+    }
+    .subtitle {
+        font-size: 1.1em;
+    }
+    .exploreButton {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .socialLinks a {
+        font-size: 1.3em;
+    }
+}
