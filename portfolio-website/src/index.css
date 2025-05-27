@@ -1,18 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  /* Keep existing color scheme and other root variables if they don't conflict */
+  color-scheme: light dark; /* Example from existing file */
+  /* background-color: #242424; /* Example from existing file - consider if needed globally */
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Default font */
+  /* background-color: #ffffff; /* Default light background, can be overridden by App.css or components */
+  /* color: #213547; /* Default light text color, can be overridden */
+}
+
+/* Remove or comment out other specific element styles like a, h1, button from here
+   if they are handled by App.css or component-specific styles.
+   For now, I'll leave them commented in case they are intended as a very basic default.
+*/
+
+/*
 a {
   font-weight: 500;
   color: #646cff;
@@ -20,14 +31,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -66,3 +69,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+*/

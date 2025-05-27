@@ -1,77 +1,226 @@
-/* Skills Section Styles */
+/* Skills Section Styles using Google-inspired colors and Inter/Poppins fonts */
+
 .skillsSection {
-    padding: 50px 20px;
-    background-color: #ffffff; /* White background */
+  padding: 60px 20px;
+  background-color: #f8f9fa; /* Very light grey, almost white */
+  font-family: 'Inter', sans-serif;
 }
 
-.skillsSection h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.2em;
-    color: #333;
+.skillsSection h2 { /* Main section heading "Skills & Technologies" */
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em; /* Larger size for main heading */
+  font-weight: 700; /* Bold */
+  color: #333; /* Dark grey for text */
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .skillsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for categories */
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto; /* Center the grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px; /* Space between cards */
+  max-width: 1200px; /* Max width of the grid container */
+  margin: 0 auto; /* Center the grid */
 }
 
-.skillCategory {
-    background-color: #f9f9f9; /* Light grey for category blocks */
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+.skillCard {
+  background-color: #ffffff; /* White background for cards */
+  border: 1px solid #e0e0e0; /* Light grey border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for minimalist card feel */
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
-.skillCategory h3 {
-    font-size: 1.5em;
-    color: #0056b3; /* Dark blue for category titles */
-    margin-bottom: 20px;
-    border-bottom: 2px solid #007bff; /* Blue accent line */
-    padding-bottom: 10px;
+.skillCard h3 { /* Category titles like "Languages", "Frameworks" */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6em;
+  font-weight: 600; /* Semi-bold */
+  color: #4285F4; /* Google Blue for category titles */
+  margin-top: 0; /* Remove default top margin */
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4285F4; /* Google Blue accent line */
+  display: flex; /* To align icon placeholder with text if needed */
+  align-items: center;
 }
 
-.skillCategory ul {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0;
-    margin: 0;
+.skillsList { /* Container for skill badges */
+  list-style-type: none; /* Remove default bullets if it were a UL */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow badges to wrap */
+  gap: 10px; /* Gap between skill badges */
 }
 
-.skillCategory li {
-    font-size: 1.05em;
-    color: #444;
-    padding: 8px 0; /* Vertical padding for list items */
-    border-bottom: 1px dashed #ddd; /* Separator for list items */
-    display: flex; /* For potential icon alignment later */
-    align-items: center; /* Align icon and text */
+.skillBadge {
+  display: inline-flex; /* Align icon placeholder and text */
+  align-items: center;
+  background-color: #e9ecef; /* Light grey background for badges */
+  padding: 8px 12px;
+  margin: 0; /* Gap is handled by parent .skillsList */
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95em;
+  color: #333; /* Dark grey text for badges */
+  line-height: 1.4;
+  position: relative; /* For tooltip positioning */
 }
 
-.skillCategory li:last-child {
-    border-bottom: none; /* Remove border for the last item */
+/* Styling for the inner span that will hold the tooltip data */
+.skillBadge > span[data-tooltip] {
+  display: inline-block; /* Or block, depending on desired layout with icon */
 }
 
-/* Placeholder for icon styling if added later
-.skillCategory li svg {
-    margin-right: 10px;
-    color: #007bff;
+/* Tooltip Styles */
+.skillBadge span[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 130%; /* Position above the skill badge, increased from 125% */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: add a slight shadow to tooltip */
 }
-*/
 
-/* Responsive adjustments */
+.skillBadge span[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hide tooltip if data-tooltip is empty */
+.skillBadge span[data-tooltip=""]::after {
+  display: none;
+}
+
+
+/* Styling for the [icon] placeholder text within a skill badge */
+/* This assumes the placeholder is directly inside .skillBadge before the text */
+/* If using a specific element for placeholder, target that instead */
+.skillBadge > span:first-child { /* If [icon] is wrapped in a span, for example */
+  margin-right: 8px; /* Space between placeholder and skill name */
+  font-weight: 500;
+  color: #4285F4; /* Google Blue for icon placeholder */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) { /* Medium screens */
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minmax for 2-3 cards */
+  }
+  .skillsSection h2 {
+    font-size: 2.2em;
+  }
+  .skillCard h3 {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 768px) { /* Smaller screens */
+  .skillsSection {
+    padding: 40px 15px;
+  }
+  .skillsSection h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  .skillCard h3 {
+    font-size: 1.3em;
+  }
+  .skillBadge {
+    font-size: 0.9em;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 576px) { /* Extra small screens */
+  .skillsGrid {
+    grid-template-columns: 1fr; /* Stack cards to 1 column */
+  }
+  .skillCard {
+    padding: 20px;
+  }
+  .skillsSection h2 {
+    font-size: 1.8em;
+  }
+  .skillCard h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* Filter Buttons Styles */
+.filterButtonsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px; /* Increased from 30px for more space */
+  gap: 10px; /* Add gap between buttons */
+}
+
+.filterButton { /* Default state for filter buttons */
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  margin: 5px; /* Keep some margin for wrapping scenarios */
+  border: 1px solid #4285F4; /* Google Blue border */
+  border-radius: 20px; /* Pill-shaped buttons */
+  background-color: #ffffff; /* White background */
+  color: #4285F4; /* Google Blue text */
+  cursor: pointer;
+  font-size: 0.95em;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #e3f2fd; /* Light blue on hover (Material Blue 50) */
+  transform: translateY(-1px);
+}
+
+.activeFilterButton { /* Active state for filter buttons */
+  background-color: #4285F4; /* Google Blue background */
+  color: #ffffff; /* White text */
+  border-color: #4285F4; /* Ensure border color matches */
+}
+
+/* JULES Alignment Text Styles */
+.julesAlignment {
+  text-align: center;
+  margin-top: 50px; /* Increased slightly for better separation */
+  padding: 25px;
+  background-color: #e3f2fd; /* Light blue background (Material Blue 50) */
+  border-radius: 8px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.julesAlignment p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #333; /* Dark grey for readability */
+  margin: 0; /* Remove default paragraph margin */
+}
+
 @media (max-width: 768px) {
-    .skillsGrid {
-        grid-template-columns: 1fr; /* Stack categories on smaller screens */
-    }
-
-    .skillCategory h3 {
-        font-size: 1.3em;
-    }
-
-    .skillCategory li {
-        font-size: 1em;
-    }
+  .julesAlignment {
+    margin-top: 40px;
+    padding: 20px;
+  }
+  .julesAlignment p {
+    font-size: 1em;
+  }
 }
